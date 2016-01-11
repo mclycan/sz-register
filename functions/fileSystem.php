@@ -7,15 +7,15 @@
 				$fileTemp = $file['tmp_name'];
 				$destination = $filePath."/".$filename;
 				move_uploaded_file($fileTemp,$destination);
-				return "文件上传成功";
+				return "upload success";
 			case 1:
-				return "上传附件超过了php.ini中upload_max_filesize选项限制的值";
+				return "php.ini upload_max_filesize";
 			case 2:
-				return "上传附件的大小超过了form表单MAX_FILE_SIZE选项限制的值";
+				return "form MAX_FILE_SIZE";
 			case 3:
-				return "附件只有部分上传";
+				return "part upload";
 			case 4:
-				return "没有选择上传附件";
+				return "no file";
 				}
 		}
 
