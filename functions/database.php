@@ -4,7 +4,7 @@
 		$hostname = "localhost";
 		$database = "register";
 		$userName = "root";
-		$password = "";
+		$password = "123456";
 		global $dataConnection;
 		$dataConnection = @mysql_connect($hostname,$userName,$password) or die(mysql_error());
 		//mysql_query("set names 'gbk'");
