@@ -38,7 +38,12 @@ include_once("functions/database.php");
 	$message = upload($_FILES['myPicture'],"uploads");
 	if($message=="upload_success"){
 		mysql_query($registerSQL);
-		$userID = mysql_insert_id();    
+		$userID = mysql_insert_id();
+		echo "Upload: " . $_FILES["myPicture"]["name"] . "<br />";
+    	echo "Type: " . $_FILES["myPicture"]["type"] . "<br />";
+    	echo "Size: " . ($_FILES["myPicture"]["size"] / 1024) . " Kb<br />";
+   		echo "Temp file: " . $_FILES["myPicture"]["tmp_name"] . "<br />";
+		echo "Stored in: " . "uploads" . $_FILES["myPicture"]["name"]; 
 		echo "success!". "<br />"; 
 	}else{
 		exit($message);	
