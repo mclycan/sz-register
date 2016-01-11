@@ -39,7 +39,7 @@ include_once("functions/database.php");
 	if($message=="文件上传成功"||$message=="没有选择上传附件"){
 		mysql_query($registerSQL);
 		$userID = mysql_insert_id();    
-		echo "提交成功"; 
+		echo "success~！"; 
 	}else{
 		exit($message);	
 	}
