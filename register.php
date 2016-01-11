@@ -43,8 +43,8 @@ include_once("functions/database.php");
     	echo "Type: " . $_FILES["myPicture"]["type"] . "<br />";
     	echo "Size: " . ($_FILES["myPicture"]["size"] / 1024) . " Kb<br />";
    		echo "Temp file: " . $_FILES["myPicture"]["tmp_name"] . "<br />";
-		echo "Stored in: " . "uploads" . $_FILES["myPicture"]["name"]; 
-		echo "success!". "<br />"; 
+		echo "Stored in: " . "uploads/" . $_FILES["myPicture"]["name"] . "<br />"; 
+		echo "success! ". "<br />"; 
 	}else{
 		exit($message);	
 	}
