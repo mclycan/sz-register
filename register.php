@@ -35,7 +35,7 @@ include_once("functions/database.php");
 	$myPictureName = $_FILES['myPicture']['name'];
 	//注册成功：插入数据进入数据库的查询语句
 	$registerSQL = "insert into users values(null,'$userName','$password','$sex','$interests','$myPictureName','$remark')";
-	$message = upload($_FILES['myPicture'],"uploads");
+	$message = upload($_FILES['myPicture'],$userName);
 	if($message=="upload_success"||$message=="no_file"){
 		mysql_query($registerSQL);
 		$userID = mysql_insert_id();    
