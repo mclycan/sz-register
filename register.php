@@ -39,7 +39,7 @@ include_once("functions/database.php");
 	if($message=="upload_success"){
 		mysql_query($registerSQL);
 		$userID = mysql_insert_id();    
-		echo "success!"; 
+		echo "success!". "<br />"; 
 	}else{
 		exit($message);	
 	}
